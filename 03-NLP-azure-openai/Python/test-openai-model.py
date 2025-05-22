@@ -12,18 +12,27 @@ def main():
         load_dotenv()
         azure_oai_endpoint = os.getenv("AZURE_OAI_ENDPOINT")
         azure_oai_key = os.getenv("AZURE_OAI_KEY")
-        azure_oai_model = os.getenv("AZURE_OAI_MODEL")
+        azure_oai_deployment = os.getenv("AZURE_OAI_DEPLOYMENT")
         
-        # Read text from file
-        text = open(file="../text-files/sample-text.txt", encoding="utf8").read()
+        # Initialize the Azure OpenAI client...
         
-        print("\nSending request for summary to Azure OpenAI endpoint...\n\n")
-        
-        # Initialize the Azure OpenAI client
-        # Add code to build request...
 
-        # Send request to Azure OpenAI model
-        # Add code to build request...
+
+        while True:
+            # Get input text
+            input_text = input("Enter the prompt (or type 'quit' to exit): ")
+            if input_text.lower() == "quit":
+                break
+            if len(input_text) == 0:
+                print("Please enter a prompt.")
+                continue
+
+            print("\nSending request for summary to Azure OpenAI endpoint...\n\n")
+            
+            # Add code to send request...
+            
+            
+            
 
     except Exception as ex:
         print(ex)
