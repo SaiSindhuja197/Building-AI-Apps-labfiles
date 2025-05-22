@@ -14,7 +14,7 @@ dotenv.load_dotenv(dotenv_path=env_path)
 openai.api_key =  os.environ.get("AZURE_OPENAI_API_KEY")
 openai.api_base =  os.environ.get("AZURE_OPENAI_ENDPOINT")
 openai.api_type = "azure"
-openai.api_version = "2023-11-01"
+openai.api_version = "2024-12-01-preview"
 chat_deployment = os.getenv("AZURE_OPENAI_CHAT_DEPLOYMENT")
  
 if "openai_model" not in st.session_state:
